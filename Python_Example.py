@@ -17,6 +17,8 @@ def main(pin):
         print("\n".join([f"\t{detecc}" for detecc in json.loads(data["detects"].replace("'", "\""))]))
         print("Warnings:")
         print("\n".join([f"\t{warning}" for warning in json.loads(data["warnings"].replace("'", "\""))]))
+        #print("Suspicious Files:") # jean forgot to add suspicious, so remove the # when the api updates again.
+        #print("\n".join([f"\t{file}" for file in json.loads(data["suspicious"].replace("'", "\""))]))
         print("Exec List:")
         print("\n".join([f"\t{file}" for file in json.loads(data["execlist"].replace("'", "\""))]))
     else:
